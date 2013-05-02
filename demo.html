@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>查询条件列表显示</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/jquery.qlist.css" /> 
+<!-- <script type="text/javascript" src="../something/js/jquery-1.7.1.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.qlist.js"></script>
+</head>   
+<body >
+    <div id="el1"></div>
+    <div id="el2"></div>
+    <div id="el3"></div>
+
+<script type="text/javascript" >
+    $(function(){
+        var options = {
+        	data: data,
+        	pop: false,
+        	title: {"name": "城市", "key": "city"},
+        }
+        $('#el1').qlist(options);
+
+        options.pop = true;
+        options.title.name = "新城市";
+        options.title.key = "new_city";
+        $('#el2').qlist(options);
+
+        options.maxsize = 12;
+        options.title.name = " new world";
+        options.title.key = "new_world";
+        $('#el3').qlist(options);
+    })
+    var data = [{
+        "key": "001", "title": "北京", "amount": "2100"}
+        ,{"key": "002", "title": "上海", "amount": "2000"}
+        ,{"key": "003", "title": "深圳", "amount": "1900"}
+        ,{"key": "004", "title": "杭州", "amount": "1800"}
+        ,{"key": "005", "title": "昆明", "amount": "1700"}
+        ,{"key": "006", "title": "苏州", "amount": "1600"}
+        ,{"key": "007", "title": "南京", "amount": "1500"}
+        ,{"key": "008", "title": "哈尔滨", "amount": "1400"}
+        ,{"key": "009", "title": "呼和浩特", "amount": "1300"}
+        ,{"key": "010", "title": "拉萨", "amount": "1200"}
+        ,{"key": "011", "title": "天津", "amount": "1000"}
+        ,{"key": "013", "title": "沈阳", "amount": "900"}
+        ,{"key": "014", "title": "唐山", "amount": "800"}
+        ,{"key": "015", "title": "大连", "amount": "700"}
+        ,{"key": "016", "title": "济南", "amount": "600"}
+        ,{"key": "017", "title": "温州", "amount": "500"}
+        ,{"key": "018", "title": "郑州", "amount": "400"}
+        ,{"key": "019", "title": "南昌", "amount": "300"}
+        ,{"key": "020", "title": "贵阳", "amount": "200"}
+        ,{"key": "021", "title": "台南", "amount": "100"}
+    ]
+</script>
+</body> 
+</html>

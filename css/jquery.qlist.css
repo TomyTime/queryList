@@ -1,0 +1,142 @@
+.wrapper{
+	margin:3px auto;
+	width:100%;
+}
+.pack-up, .pack-down{
+	display:block;
+	width:100%;
+	overflow:hidden;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	background:#fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+}
+.pack-up{
+	height:32px;
+	border:1px solid #ddd;
+}
+.pack-down{
+	height:auto;
+	border:1px solid #ddd;
+}
+
+.pack-list{
+	list-style-type: none;
+	background:#FFF;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	
+}
+.pack-list li{
+	/*display:inline-block;*/
+	float:left;
+	margin-left:20px;
+	text-align:center;
+	white-space:nowrap;
+	word-break:keep-all;
+	line-height:30px;
+	height:30px;
+	cursor: pointer;
+}
+.pack-list .disabled{
+	padding: 0;
+	margin:0px;
+	border:0;
+}
+
+.pack-list .pull-out{
+	float:right;
+}
+.pack-list li a{
+	padding-left:5px;
+	padding-right:5px;
+	font-size:14px;
+	text-decoration: none;
+	display:inline-block;
+	color:#006CCA;
+	text-align: center;
+    height:26px;
+    line-height: 26px;
+}
+.pack-list li a span{
+	font-size:12px;
+	display:inline-block;
+	text-decoration: none;
+	color:#999999;
+}
+.pack-list li.active a {
+    background:#FFFFFF;
+    border: 1px solid #ECECEC;
+    height:26px;
+    line-height: 26px;
+    color:#555;
+}
+.pack-list li.disabled{
+    color:#555555;
+}
+.pack-list li.disabled a{
+    background:#FFFFFF;
+    color:#555555;
+}
+.pack-list li.disabled a:hover{
+    text-decoration:none;
+    background:#FFFFFF;
+    color:#555555;
+}
+li.active a{
+	color:#555555;
+	height: 26px;
+	line-height: 26px;
+}
+.pack-list li a:hover{
+    color:#0088FF;
+    background: #EEEEEE;
+    height:26px;
+    line-height: 26px;
+}
+
+.pack-list li a:hover span{
+	
+}
+.pack-list .pull-right{
+	float:right;
+}
+
+.btn{
+   margin:0px;
+   border:0px;
+   cursor:pointer;
+}
+.btn_arrow_down{
+     height: 24px;
+     width: 24px;
+     margin-top: 3px;
+     margin-right: 3px;
+}
+.btn_more{
+    margin-top:3px;
+    margin-right:3px;
+    height: 24px;
+    width: 24px;
+}
+.close_modal{ 
+        position:absolute; /* important */
+        top:0px; /* start from top */
+        left:0px; /* start from left */
+        height:100%; /* cover the whole page */
+        width:100%;  /* cover the whole page */
+        display:none; /* don't show it '*/          
+        /* styling bellow */
+        background-color:#808080; 
+        opacity: 0;
+}
+.modal_window{
+    position:absolute; /* important so we can position it on center later */
+    display:none; /* don't show it */
+    width:600px;
+    height:auto;
+    border:1px solid gray;
+    background: white;
+    overflow-x: hidden;
+}
