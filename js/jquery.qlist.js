@@ -16,7 +16,7 @@
         var id = $el.attr("id");
 
         function init() {
-        	if(options.data.length > options.maxsize){
+        	if( options.maxsize > 0 && options.data.length > options.maxsize){
                  options.pop = true;
             }
             $el.addClass("pack-up");
@@ -69,7 +69,7 @@
                      $('#modal_window').html('');
                      $('#modal_window').append('<ul id="'+$e.attr("id")+'_modal'+'" class="pack-list"></ul>');
                      $('#modal_window .pack-list').html($e.html());
-                     $('#modal_window .pack-list li:lt(3)').hide();
+                     $('#modal_window .pack-list li:lt('+(3+options.maxsize)+')').hide();
                     // $('#modal_window .pack-list li.pull-out').hide();
                      $('#modal_window .pack-list li:gt(2)').each(function(index){
                          $(this).data('index', $e.find("li:eq("+(index+3)+")").data("index"));
@@ -263,7 +263,7 @@
         data: [],
         date: false,
         pop: false,
-        maxsize: 999
+        maxsize: 0
     };
 
 })(jQuery);
